@@ -2,5 +2,9 @@
     {
         "nome": "usuario",
         "senha": "1234"
+    },
+    {
+        "nome": "joao bleibeson",
+        "senha": "123456"
     }
 ]

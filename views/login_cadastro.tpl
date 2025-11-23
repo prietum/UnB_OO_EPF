@@ -1,10 +1,11 @@
 % rebase('layout.tpl', title='Cadastro')
 
-%if status == 1:
-<p>ERRO: Já existe um usuário com esse nome!</p>
+<h1>faça cadastro</h1>
+
+%if status == '1':
+    <p>ERRO: Já existe um usuário com esse nome!</p>
 %end
 
-<h1>faça cadastro</h1>
 <form method="post">
     <label>Nome:<br>
         <input type="text" name="nome" required>

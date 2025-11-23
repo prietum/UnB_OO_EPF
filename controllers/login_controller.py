@@ -31,11 +31,15 @@ class Login_Controller(BaseController):
             # Senão, manda fazer o login de novo redirecionando para /login com mensagem de erro
             user = self.user_service.get_by_nome(user_nome)
 
-            if user != None and user.senha == user_senha:
-                # Redireciona para /pet/nome_do_usuário, e daí passa a ser controlado pelo pet_controller.py
-                self.redirect(f'/pet/{user_nome}')
+            if user != None:
+                if user.senha == user_senha:
+                    # Redireciona para /pet/nome_do_usuário, e daí passa a ser controlado pelo pet_controller.py
+                    self.redirect(f'/pet/{user_nome}')
+                else:
+                    # Redireciona para login com status 3 (login deu errado, senha inválida)
+                    self.redirect(f'/login?status=2')
             else:
-                # Redireciona para login com status 1 (login deu errado)
+                # Redireciona para login com status 1 (login deu errado, nome inválido)
                 self.redirect('/login?status=1')
         
     def prompt_register(self):
@@ -47,18 +51,22 @@ class Login_Controller(BaseController):
         else:
                 #POST
             # Imprime os dados colocados no formulário 'view/login_cadastro'
+            user_nome = request.POST.nome
+            user_senha = request.POST.senha
             print(request.POST.nome)
             print(request.POST.senha)
 
             # Se os dados forem válidos, redireciona para /login com uma mensagem de sucesso de cadastro
             # Senão, manda fazer o cadastro de novo redirecionando para /login/cadastro com mensagem de erro
-            if self.user_service.get_by_nome(request.POST.nome) != None:
+            user = self.user_service.get_by_nome(user_nome)
+
+            if user == None:
                 self.user_service.cadastrar()
                 # Redireciona para /login com status 2 (cadastro deu certo)
                 self.redirect('/login?status=2')
             else:
                 # Redireciona para /login/cadastro com status 1 (cadastro deu errado)
-                self.redirect('/login/cadastro?status=1')
+                self.redirect('/login/register?status=1')
 
 login_routes = Bottle()
 login_controller = Login_Controller(login_routes)
