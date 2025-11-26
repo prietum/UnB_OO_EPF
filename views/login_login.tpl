@@ -8,7 +8,7 @@
 %if status == '1':
     <p>ERRO: Nome de usuário errado!</p>
 %elif status == '2':
-    <p>ERRO: Seu cadastro foi feito com sucesso!</p>
+    <p>Seu cadastro foi feito com sucesso!</p>
 %elif status == '3':
     <p>ERRO: Senha errada!</p>
 %end
@@ -22,4 +22,5 @@
     </label><br><br>
     <button type="submit">Login</button>
 </form>
+
 <a href="/login/register">Cadastrar</a>
