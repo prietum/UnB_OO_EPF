@@ -26,10 +26,10 @@ class LoginController(BaseController):
 
             if user is not None and user.senha == user_senha:
 
-                # 🔥 SALVA COOKIE AQUI
+                # SALVA COOKIE AQUI
                 response.set_cookie("user_id", str(user.id), path="/")
 
-                return self.redirect('/pet/create')
+                return self.redirect('/pet')
 
             elif user is None:
                 print(user)

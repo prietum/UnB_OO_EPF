@@ -18,10 +18,7 @@ class PetController:
         def create_pet():
             user_id = request.get_cookie("user_id")
             if not user_id:
-                return redirect('/login')
-            else:
-                redirect('/pet')
-
+             return redirect('/login')
             if request.method == 'POST':
                 nome = request.forms.get('nome')
 

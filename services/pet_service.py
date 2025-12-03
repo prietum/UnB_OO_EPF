@@ -2,7 +2,9 @@ import json
 import os
 from models.pet import PetModel, Pet
 
-DATA_PATH = os.path.join("data", "pets.json")
+DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "pets.json")
+DATA_PATH = os.path.abspath(DATA_PATH)
+
 
 
 class PetService:

@@ -1,2 +1,86 @@
 [
+    {
+        "id": 1,
+        "user_id": 1,
+        "nome": "alan",
+        "fome": 6,
+        "felicidade": 7,
+        "energia": 9,
+        "sujeira": 7,
+        "qi": 4,
+        "vida": 70,
+        "vidamax": 100
+    },
+    {
+        "id": 2,
+        "user_id": 2,
+        "nome": "aura",
+        "fome": 10,
+        "felicidade": 10,
+        "energia": 10,
+        "sujeira": 10,
+        "qi": 1,
+        "vida": 100,
+        "vidamax": 100
+    },
+    {
+        "id": 3,
+        "user_id": 3,
+        "nome": "testezinho",
+        "fome": 10,
+        "felicidade": 10,
+        "energia": 10,
+        "sujeira": 0,
+        "qi": 12,
+        "vida": 0,
+        "vidamax": 100
+    },
+    {
+        "id": 4,
+        "user_id": 4,
+        "nome": "eta",
+        "fome": 10,
+        "felicidade": 10,
+        "energia": 10,
+        "sujeira": 10,
+        "qi": 1,
+        "vida": 100,
+        "vidamax": 100
+    },
+    {
+        "id": 5,
+        "user_id": 5,
+        "nome": "teste 4",
+        "fome": 10,
+        "felicidade": 10,
+        "energia": 10,
+        "sujeira": 10,
+        "qi": 1,
+        "vida": 100,
+        "vidamax": 100
+    },
+    {
+        "id": 6,
+        "user_id": 6,
+        "nome": "teste 5 ",
+        "fome": 10,
+        "felicidade": 10,
+        "energia": 10,
+        "sujeira": 10,
+        "qi": 1,
+        "vida": 100,
+        "vidamax": 100
+    },
+    {
+        "id": 7,
+        "user_id": 7,
+        "nome": "teste 6",
+        "fome": 10,
+        "felicidade": 10,
+        "energia": 10,
+        "sujeira": 10,
+        "qi": 1,
+        "vida": 100,
+        "vidamax": 100
+    }
 ]
