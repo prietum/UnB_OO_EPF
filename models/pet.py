@@ -55,7 +55,7 @@ class Pet:
         r2 = random.randint(0,1)
         self.sujeira = min(10, self.sujeira + 1)
         self.energia = max(0, self.energia - r1)
-        self.fome = max(0, self.fome - r2)
+        self.felicidade = max(0, self.felicidade - r2)
 
     def curar(self):
         r1 = random.randint(0,1)
